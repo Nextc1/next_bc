@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: nodejs-app
+    env: node
+    plan: starter
+    region: oregon # You can change this to your preferred region
+    buildCommand: npm install
+    startCommand: npm start
+    runtime: node 22
+    envVars:
+      - key: PORT
+        value: "3000"
+    disk:
+      - name: persistent-data
+        mountPath: /data
+        sizeGB: 1
+    healthCheckPath: /
+    allowAllTraffic: true
