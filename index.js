@@ -299,6 +299,11 @@ app.post("/usdc-drop", async (req, res) => {
   }
 });
 
+
+app.get('/hii', (req, res) => {
+    res.send('hii');
+});
+
 app.listen(port, () => {
   console.log(
     `Server running on port ${port}, listening on both IPv4 and IPv6`
