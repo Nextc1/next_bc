@@ -46,10 +46,10 @@ app.use(cors()); // Enable CORS for all routes
 // );
 
 
-const credentials = {
-  key: privateKey,
-  cert: certificate,
-};
+// const credentials = {
+//   key: privateKey,
+//   cert: certificate,
+// };
 
 // Setup connection and UMI with identity
 const connection = new Connection(
